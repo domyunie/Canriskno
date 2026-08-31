@@ -5,11 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información sobre el Cáncer - Canrisk</title>
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
-    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.png">
+    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
+    <style>
+        /*  GLOSARIO MÉDICO  */
+        .glossary-section {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.2rem;
+        }
+ 
+        .glossary-section h2 {
+            text-align: center;
+            color: #a83862;
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+        }
+ 
+        .glossary-section .sub {
+            text-align: center;
+            color: #777;
+            font-size: 0.85rem;
+            margin-bottom: 1.8rem;
+        }
+ 
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.1rem;
+        }
+ 
+        .glossary-term {
+            background: #fff;
+            border: 1px solid #eed4dd;
+            border-left: 5px solid #a83862;
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+ 
+        .glossary-term dt {
+            font-weight: 700;
+            color: #a83862;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+ 
+        .glossary-term dd {
+            margin: 0;
+            font-size: 0.87rem;
+            line-height: 1.5;
+            color: #555;
+        }
+ 
+        /* ===== RUTA DEL DIAGNÓSTICO (TIMELINE) ===== */
+        .diagnosis-path {
+            background: linear-gradient(145deg, #5e1c38, #a83862);
+            padding: 3rem 1.2rem;
+            margin: 3rem 0;
+        }
+ 
+        .diagnosis-path h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+        }
+ 
+        .diagnosis-path .sub {
+            text-align: center;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+            margin-bottom: 2.2rem;
+        }
+ 
+        .timeline {
+            max-width: 950px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0;
+            counter-reset: step;
+        }
+ 
+        .timeline-step {
+            flex: 1 1 170px;
+            max-width: 200px;
+            text-align: center;
+            padding: 0 0.8rem;
+            position: relative;
+        }
+ 
+        .timeline-step .step-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #fff;
+            color: #a83862;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.7rem;
+            font-size: 1.1rem;
+        }
+ 
+        .timeline-step h4 {
+            color: #fff;
+            font-size: 0.92rem;
+            margin: 0 0 0.4rem 0;
+        }
+ 
+        .timeline-step p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.8rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+ 
+        /* NOTA FINAL  */
+        .glossary-note {
+            max-width: 700px;
+            margin: 2rem auto 0;
+            text-align: center;
+            font-size: 0.82rem;
+            color: #888;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- ===== LOGO Y BOTÓN DEL MENÚ LATERAL ===== -->
+ 
+    <!--  LOGO Y BOTÓN DEL MENÚ LATERAL -->
     <div class="navbar-brand">
         <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Abrir menú lateral">
             <span></span>
@@ -17,43 +144,44 @@
             <span></span>
         </button>
         <h1>Canrisk</h1>
-        <img src="../../MULTIMEDIA/Canrisk LOGO.png" alt="Canrisk" class="C-L">
+        <img src="../../MULTIMEDIA/Canrisk LOGO.svg" alt="Canrisk" class="C-L">
     </div>
-
-    <!-- ===== MENÚ LATERAL (SIDEBAR) ===== -->
+ 
+    <!-- MENÚ LATERAL (SIDEBAR)  -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
+ 
         <ul class="sidebar-list">
             <li><a href="cancer-intro.html">Introducción al cáncer &rarr;</a></li>
             <li><a href="cancer.html">Tipos de Cáncer &rarr;</a></li>
             <li><a href="psycho-help.html">Apoyo psicológico &rarr;</a></li>
             <li><a href="help.html">Centro de ayuda &rarr;</a></li>
             <li><a href="quizz.html">Cuestionario &rarr;</a></li>
+            <li><a href="faq.html">Preguntas frecuentes &rarr;</a></li>
         </ul>
     </nav>
-
-    <!-- ===== FONDO OSCURO AL ABRIR EL SIDEBAR ===== -->
+ 
+    <!-- FONDO OSCURO AL ABRIR EL SIDEBAR  -->
     <div class="overlay-menu" id="menuOverlay"></div>
-
-    <!-- ===== BARRA DE NAVEGACIÓN SUPERIOR ===== -->
+ 
+    <!--  BARRA DE NAVEGACIÓN SUPERIOR -->
     <nav class="navbar" id="mainNav">
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
+ 
         <ul class="Info-nav">
             <li class="box-II"><h4><a href="../ESPANOL/Principal.html">Inicio</a></h4></li>
             <li class="box-II"><a href="../ESPANOL/aboutus.html"><h4>Sobre nosotros</h4></a></li>
             <li class="box-II"><a href="../ESPANOL/Contacto.html"><h4>Contáctanos</h4></a></li>
         </ul>
-
+ 
         <div class="right-group">
             <ul class="Index">
                 <li class="box-I"><a href="../../HTML/ESPANOL/login.html"><h4>Iniciar Sesión</h4></a></li>
@@ -65,22 +193,23 @@
             </div>
         </div>
     </nav>
-
+ 
     <main class="cancer-main">
-
+ 
         <div class="cancer-intro">
             <h2>Conoce, Detecta, Previene</h2>
             <p>Guía médica detallada sobre los tipos de cáncer más diagnosticados a nivel mundial. La educación y la prevención son nuestras mejores aliadas para la salud.</p>
         </div>
-
+ 
         <div class="cancer-tabs" role="tablist">
             <a href="#mama" class="tab-link" data-target="mama">Mama</a>
             <a href="#cervix" class="tab-link" data-target="cervix">Cérvix</a>
             <a href="#prostata" class="tab-link" data-target="prostata">Próstata</a>
             <a href="#pulmon" class="tab-link" data-target="pulmon">Pulmón</a>
             <a href="#estomago" class="tab-link" data-target="estomago">Estómago</a>
+            <a href="#colon" class="tab-link" data-target="colon">Colorrectal</a>
         </div>
-
+ 
         <section class="cancer-section" id="mama">
             <div class="cancer-header">
                 <div class="icono-cancer" aria-hidden="true">
@@ -90,7 +219,7 @@
                 </div>
                 <h3>Cáncer de mama</h3>
             </div>
-
+ 
             <div class="cancer-accordion">
                 <details class="accordion-card">
                     <summary>¿Qué es?</summary>
@@ -98,7 +227,7 @@
                         <p>El cáncer de mama es una enfermedad en la cual las células del tejido mamario mutan y se multiplican sin control, dando lugar habitualmente a un tumor maligno. Puede originarse tanto en los conductos lácteos (carcinoma ductal, el más común) como en los lobulillos glandulares (carcinoma lobulillar). Aunque afecta principalmente a mujeres a partir de la cuarta década de vida, los hombres también pueden desarrollarlo en un porcentaje menor (aproximadamente el 1% de los casos).</p>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Factores de riesgo</summary>
                     <div class="accordion-card-content">
@@ -111,7 +240,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Síntomas de alerta</summary>
                     <div class="accordion-card-content">
@@ -123,7 +252,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Detección y prevención</summary>
                     <div class="accordion-card-content">
@@ -132,7 +261,7 @@
                 </details>
             </div>
         </section>
-
+ 
         <section class="cancer-section" id="cervix">
             <div class="cancer-header">
                 <div class="icono-cancer" aria-hidden="true">
@@ -143,7 +272,7 @@
                 </div>
                 <h3>Cáncer de cérvix</h3>
             </div>
-
+ 
             <div class="cancer-accordion">
                 <details class="accordion-card">
                     <summary>¿Qué es?</summary>
@@ -151,7 +280,7 @@
                         <p>También conocido como cáncer de cuello uterino, se origina en las células del cuello del útero (la porción inferior que conecta con la vagina). Su desarrollo suele ser sumamente lento, comenzando primero con lesiones precancerosas conocidas como displasias. Está vinculado de forma directa y casi exclusiva a la infección persistente por tipos oncogénicos del Virus del Papiloma Humano (VPH), siendo los genotipos 16 y 18 los responsables de la mayoría de los casos graves.</p>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Factores de riesgo</summary>
                     <div class="accordion-card-content">
@@ -164,7 +293,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Síntomas de alerta</summary>
                     <div class="accordion-card-content">
@@ -176,7 +305,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Detección y prevención</summary>
                     <div class="accordion-card-content">
@@ -185,8 +314,8 @@
                 </details>
             </div>
         </section>
-
-
+ 
+ 
         <section class="cancer-section" id="prostata">
             <div class="cancer-header">
                 <div class="icono-cancer" aria-hidden="true">
@@ -197,7 +326,7 @@
                 </div>
                 <h3>Cáncer de próstata</h3>
             </div>
-
+ 
             <div class="cancer-accordion">
                 <details class="accordion-card">
                     <summary>¿Qué es?</summary>
@@ -205,7 +334,7 @@
                         <p>El cáncer de próstata se desarrolla en la glándula prostática de los hombres, un órgano pequeño con forma de nuez situado debajo de la vejiga cuya función principal es producir el líquido seminal que nutre y transporta los espermatozoides. Es uno de los tumores más diagnosticados en la población masculina. La gran mayoría de los casos corresponden a adenocarcinoma y se caracterizan por una evolución sumamente lenta, lo que permite un pronóstico muy favorable si se diagnostica a tiempo.</p>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Factores de riesgo</summary>
                     <div class="accordion-card-content">
@@ -217,7 +346,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Síntomas de alerta</summary>
                     <div class="accordion-card-content">
@@ -229,7 +358,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Detección y prevención</summary>
                     <div class="accordion-card-content">
@@ -238,7 +367,7 @@
                 </details>
             </div>
         </section>
-
+ 
         <section class="cancer-section" id="pulmon">
             <div class="cancer-header">
                 <div class="icono-cancer" aria-hidden="true">
@@ -248,7 +377,7 @@
                 </div>
                 <h3>Cáncer de pulmón</h3>
             </div>
-
+ 
             <div class="cancer-accordion">
                 <details class="accordion-card">
                     <summary>¿Qué es?</summary>
@@ -256,7 +385,7 @@
                         <p>El cáncer de pulmón se origina en los tejidos pulmonares, habitualmente en las células que recubren los conductos aéreos y bronquios. Se divide principalmente en dos grandes grupos: cáncer de pulmón de células pequeñas (microcítico) y de células no pequeñas (no microcítico). Representa una de las causas principales de mortalidad oncológica a nivel global, estando fuertemente asociado en una abrumadora mayoría de los casos al consumo prolongado de tabaco y derivados del humo inhalado.</p>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Factores de riesgo</summary>
                     <div class="accordion-card-content">
@@ -269,7 +398,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Síntomas de alerta</summary>
                     <div class="accordion-card-content">
@@ -281,7 +410,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Detección y prevención</summary>
                     <div class="accordion-card-content">
@@ -290,7 +419,7 @@
                 </details>
             </div>
         </section>
-
+ 
         <section class="cancer-section" id="estomago">
             <div class="cancer-header">
                 <div class="icono-cancer" aria-hidden="true">
@@ -300,7 +429,7 @@
                 </div>
                 <h3>Cáncer de estómago</h3>
             </div>
-
+ 
             <div class="cancer-accordion">
                 <details class="accordion-card">
                     <summary>¿Qué es?</summary>
@@ -308,7 +437,7 @@
                         <p>El cáncer gástrico (o de estómago) se gesta cuando las células que tapizan el revestimiento interno de la mucosa estomacal comienzan a multiplicarse de forma anómala hasta constituir una lesión tumoral. Su progresión suele ser sigilosa y lenta a lo largo de los años, precedida habitualmente por procesos crónicos inflamatorios como gastritis atrófica. El tipo histológico predominante es el adenocarcinoma gástrico, el cual responde de manera positiva a tratamientos combinados si se detecta antes de invadir capas profundas o ganglios cercanos.</p>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Factores de riesgo</summary>
                     <div class="accordion-card-content">
@@ -321,7 +450,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Síntomas de alerta</summary>
                     <div class="accordion-card-content">
@@ -333,7 +462,7 @@
                         </ul>
                     </div>
                 </details>
-
+ 
                 <details class="accordion-card">
                     <summary>Detección y prevención</summary>
                     <div class="accordion-card-content">
@@ -342,13 +471,143 @@
                 </details>
             </div>
         </section>
-
+ 
+        <section class="cancer-section" id="colon">
+            <div class="cancer-header">
+                <div class="icono-cancer" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path d="M6 4c-1.5 0-2.5 1.2-2.5 2.5S4.5 9 6 9h1M6 9c-1.5 0-2.5 1.2-2.5 2.5S4.5 14 6 14h4M18 20c1.5 0 2.5-1.2 2.5-2.5S19.5 15 18 15h-1M18 15c1.5 0 2.5-1.2 2.5-2.5S19.5 10 18 10h-8"/>
+                    </svg>
+                </div>
+                <h3>Cáncer colorrectal</h3>
+            </div>
+ 
+            <div class="cancer-accordion">
+                <details class="accordion-card">
+                    <summary>¿Qué es?</summary>
+                    <div class="accordion-card-content">
+                        <p>El cáncer colorrectal engloba a los tumores malignos que se desarrollan en el colon o en el recto, la parte final del sistema digestivo. En la mayoría de los casos, comienza como un pólipo, un crecimiento benigno de tejido en la pared intestinal que, con el paso de los años, puede transformarse en canceroso si no se detecta y extirpa a tiempo. Es uno de los tipos de cáncer con mayor potencial de prevención, precisamente porque su etapa precancerosa (el pólipo) es fácilmente identificable mediante estudios endoscópicos.</p>
+                    </div>
+                </details>
+ 
+                <details class="accordion-card">
+                    <summary>Factores de riesgo</summary>
+                    <div class="accordion-card-content">
+                        <ul>
+                            <li><strong>Edad:</strong> El riesgo aumenta notablemente después de los 50 años, aunque los casos en personas más jóvenes van en aumento.</li>
+                            <li><strong>Antecedentes familiares y personales:</strong> Pólipos previos, enfermedad inflamatoria intestinal (colitis ulcerosa o Crohn) o familiares de primer grado con cáncer colorrectal.</li>
+                            <li><strong>Alimentación:</strong> Dietas altas en carnes rojas y procesadas, y bajas en fibra, frutas y verduras.</li>
+                            <li><strong>Estilo de vida:</strong> Sedentarismo, obesidad, tabaquismo y consumo elevado de alcohol.</li>
+                            <li><strong>Diabetes tipo 2:</strong> Se asocia con un riesgo moderadamente mayor de desarrollar este tipo de cáncer.</li>
+                        </ul>
+                    </div>
+                </details>
+ 
+                <details class="accordion-card">
+                    <summary>Síntomas de alerta</summary>
+                    <div class="accordion-card-content">
+                        <ul>
+                            <li>Cambios persistentes en los hábitos intestinales, como diarrea, estreñimiento o alteración en la consistencia de las heces durante varias semanas.</li>
+                            <li>Presencia de sangre en las heces o sangrado rectal.</li>
+                            <li>Molestias abdominales continuas, como cólicos, gases o dolor que no desaparece.</li>
+                            <li>Sensación de que el intestino no se vacía por completo, debilidad, fatiga y pérdida de peso sin causa aparente.</li>
+                        </ul>
+                    </div>
+                </details>
+ 
+                <details class="accordion-card">
+                    <summary>Detección y prevención</summary>
+                    <div class="accordion-card-content">
+                        <p>La colonoscopia es la herramienta de referencia, ya que permite detectar y remover pólipos antes de que se conviertan en cáncer; se recomienda a partir de los 45-50 años o antes si existen antecedentes familiares. Otras pruebas complementarias incluyen el análisis de sangre oculta en heces. Las medidas preventivas incluyen aumentar el consumo de fibra, frutas y verduras, reducir las carnes procesadas, mantener actividad física regular y evitar el tabaco y el alcohol en exceso.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+ 
         <div class="cancer-lema">
             <p>La detección temprana es la mejor herramienta contra el cáncer. Consultá siempre con un profesional de la salud.</p>
         </div>
-
+ 
+        <!-- RUTA DEL DIAGNÓSTICO -->
+        <div class="diagnosis-path">
+            <h2>🧭 ¿Qué pasa después de notar un síntoma?</h2>
+            <p class="sub">Una guía general del proceso — cada caso puede variar según el criterio médico</p>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-circle">1</div>
+                    <h4>Consulta inicial</h4>
+                    <p>Acudes con un médico general y explicas los síntomas que has notado.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">2</div>
+                    <h4>Estudios de detección</h4>
+                    <p>Se solicitan exámenes de laboratorio, imágenes o estudios específicos según el caso.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">3</div>
+                    <h4>Biopsia</h4>
+                    <p>Si hay una lesión sospechosa, se toma una pequeña muestra de tejido para analizarla.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">4</div>
+                    <h4>Diagnóstico y etapa</h4>
+                    <p>El equipo médico confirma el diagnóstico y determina en qué etapa se encuentra.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-circle">5</div>
+                    <h4>Plan de tratamiento</h4>
+                    <p>Se define un plan personalizado junto a especialistas en oncología.</p>
+                </div>
+            </div>
+        </div>
+ 
+        <!--  GLOSARIO MÉDICO  -->
+        <div class="glossary-section">
+            <h2>Glosario médico básico</h2>
+            <p class="sub">Términos que aparecen frecuentemente al hablar de cáncer, explicados en lenguaje sencillo</p>
+            <dl class="glossary-grid">
+                <div class="glossary-term">
+                    <dt>Tumor benigno</dt>
+                    <dd>Crecimiento de células que no invade otros tejidos ni se propaga a otras partes del cuerpo.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Tumor maligno</dt>
+                    <dd>Crecimiento de células con capacidad de invadir tejidos cercanos y propagarse a otras zonas del cuerpo.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Metástasis</dt>
+                    <dd>Proceso mediante el cual células cancerosas se desprenden del tumor original y forman nuevos tumores en otras partes del cuerpo.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Biopsia</dt>
+                    <dd>Extracción de una pequeña muestra de tejido para analizarla bajo el microscopio y confirmar si contiene células cancerosas.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Adenocarcinoma</dt>
+                    <dd>Tipo de cáncer que se origina en las células glandulares, presentes en órganos como mama, próstata, pulmón o estómago.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Quimioterapia</dt>
+                    <dd>Tratamiento con medicamentos que buscan destruir o frenar el crecimiento de las células cancerosas en el cuerpo.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Radioterapia</dt>
+                    <dd>Uso de radiación de alta energía dirigida a un área específica para destruir células cancerosas o reducir tumores.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Screening (tamizaje)</dt>
+                    <dd>Pruebas realizadas a personas sin síntomas para detectar posibles signos de cáncer en etapas muy tempranas.</dd>
+                </div>
+                <div class="glossary-term">
+                    <dt>Remisión</dt>
+                    <dd>Disminución o desaparición de los signos y síntomas del cáncer, ya sea de forma parcial o completa.</dd>
+                </div>
+            </dl>
+            <p class="glossary-note">Este glosario es solo informativo y no sustituye la explicación de un profesional de la salud sobre tu caso particular.</p>
+        </div>
+ 
     </main>
-<!-- ===== PIE DE PÁGINA ===== -->
+<!--  PIE DE PÁGINA -->
     <footer>
     <div class="footer-container">
         <div class="footer-content">
@@ -381,13 +640,13 @@
         </div>
     </div>
 </footer>
-
-
+ 
+ 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const tabs = document.querySelectorAll('.tab-link');
             const sections = document.querySelectorAll('.cancer-section');
-
+ 
             function showSection(targetId) {
                 sections.forEach(function (section) {
                     section.classList.remove('active');
@@ -397,7 +656,7 @@
                 tabs.forEach(function (tab) {
                     tab.classList.remove('active');
                 });
-
+ 
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.classList.add('active');
@@ -407,7 +666,7 @@
                     targetTab.classList.add('active');
                 }
             }
-
+ 
             tabs.forEach(function (tab) {
                 tab.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -415,27 +674,27 @@
                     showSection(targetId);
                 });
             });
-
+ 
             showSection('mama');
             const btn = document.getElementById('hamburgerBtn');
             const nav = document.getElementById('mainNav');
-
+ 
             btn.addEventListener('click', () => {
                 const isOpen = nav.classList.toggle('open');
                 btn.classList.toggle('open', isOpen);
                 btn.setAttribute('aria-expanded', isOpen);
             });
-
+ 
             const sidebarBtn = document.getElementById('sidebarBtn');
             const sidebarMenu = document.getElementById('sidebarMenu');
             const menuOverlay = document.getElementById('menuOverlay');
-
+ 
             const toggleSidebar = () => {
                 const isOpen = sidebarMenu.classList.toggle('open');
                 sidebarBtn.classList.toggle('open', isOpen);
                 menuOverlay.classList.toggle('show', isOpen);
             };
-
+ 
             sidebarBtn.addEventListener('click', toggleSidebar);
             menuOverlay.addEventListener('click', toggleSidebar);
         });
@@ -443,3 +702,4 @@
     <script src="../../JS/site.js" defer></script>
 </body>
 </html>
+ 

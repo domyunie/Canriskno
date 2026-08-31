@@ -23,6 +23,8 @@
     "ficha1.html": "HTML/INGLES/helpING.html",
     "quizz.html": "HTML/INGLES/quizzING.html",
     "faq.html": "HTML/INGLES/faqING.html",
+    "Index.html": "INICIO/Index.html",
+    "Faq.N.html": "INICIO/Faq.N.html",
 
     "principaling.html": "HTML/ESPANOL/Principal.html",
     "aboutuseng.html": "HTML/ESPANOL/aboutus.html",
@@ -32,7 +34,9 @@
     "psychohelping.html": "HTML/ESPANOL/psycho-help.html",
     "helping.html": "HTML/ESPANOL/help.html",
     "quizzing.html": "HTML/ESPANOL/quizz.html",
-    "faqing.html": "HTML/ESPANOL/faq.html"
+    "faqing.html": "HTML/ESPANOL/faq.html",
+    "IndexING.html": "INICIO/IndexING.html",
+    "Faq.N-ING.html": "INICIO/Faq.N-ING.html",
   };
 
   function currentBasename() {
@@ -124,4 +128,20 @@
     setupSessionIndicator();
     setupLangSwitch();
   });
+
+  function setupLangSwitchNL() {
+    var btn = document.getElementById("langSwitch");
+    if (!btn) return;
+
+    var current = currentBasename();
+    var target = LANG_MAP[current];
+
+    if(!target) {
+      var isEnglish = (document.documentElement.lang || "es").toLowerCase().indexOf("en") === 0;
+      target = isEnglish ? "INICIO/index.html" : "INICIO/IndexING.html";
+    }
+
+    btn.setAttribute("href", rootPrefix() + target);
+    btn.textContent = target.indexOf("/INGLES/") !== -1 ? "EN" : "ES";
+  }
 })();

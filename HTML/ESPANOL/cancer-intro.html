@@ -5,11 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introducción al Cáncer - Canrisk</title>
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
-    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.png">
+    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
+    <style>
+        /*  TARJETA QUE ROTA (FLIP CARD)  */
+        .flip-card {
+            perspective: 1200px;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner,
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(145deg, #a83862, #5e1c38);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.8rem;
+            gap: 0.6rem;
+        }
+
+        .flip-card-back .flip-icon {
+            font-size: 2rem;
+        }
+
+        .flip-card-back p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .flip-hint {
+            display: block;
+            margin-top: 0.6rem;
+            font-size: 0.8rem;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /*  BLOQUE DE DATOS RÁPIDOS */
+        .quick-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 2rem auto;
+            max-width: 1000px;
+            padding: 0 1rem;
+        }
+
+        .stat-box {
+            flex: 1 1 220px;
+            max-width: 260px;
+            background: #fff;
+            border: 2px solid #a83862;
+            border-radius: 14px;
+            padding: 1.2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(168, 56, 98, 0.15);
+        }
+
+        .stat-box .stat-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .stat-box .stat-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #a83862;
+            display: block;
+        }
+
+        .stat-box .stat-label {
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        /*  ÍCONOS EN TÍTULOS Y LISTAS  */
+        .info-card h3 .card-icon {
+            margin-right: 0.4rem;
+        }
+
+        .Start ul li {
+            list-style: none;
+            position: relative;
+            padding-left: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .Start ul li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ===== LOGO Y BOTÓN DEL MENÚ LATERAL ===== -->
+    <!--  LOGO Y BOTÓN DEL MENÚ LATERAL -->
     <div class="navbar-brand">
         <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Abrir menú lateral">
             <span></span>
@@ -17,29 +148,31 @@
             <span></span>
         </button>
         <h1>Canrisk</h1>
-        <img src="../../MULTIMEDIA/Canrisk LOGO.png" alt="Canrisk" class="C-L"> 
+        <img src="../../MULTIMEDIA/Canrisk LOGO.svg" alt="Canrisk" class="C-L"> 
     </div>
 
-    <!-- ===== MENÚ LATERAL (SIDEBAR) ===== -->
+    <!--  MENÚ LATERAL (SIDEBAR)  -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
+        
         <ul class="sidebar-list">
             <li><a href="cancer-intro.html">Introducción al cáncer &rarr;</a></li>
+            <li><a href="cancer.html">Tipos de Cáncer &rarr;</a></li>
             <li><a href="psycho-help.html">Apoyo psicológico &rarr;</a></li>
             <li><a href="help.html">Centro de ayuda &rarr;</a></li>
             <li><a href="quizz.html">Cuestionario &rarr;</a></li>
+            <li><a href="faq.html">Preguntas frecuentes &rarr;</a></li>
         </ul>
     </nav>
-
-    <!-- ===== FONDO OSCURO AL ABRIR EL SIDEBAR ===== -->
+    
+    <!--  FONDO OSCURO AL ABRIR EL SIDEBAR  -->
     <div class="overlay-menu" id="menuOverlay"></div>
 
-    <!-- ===== BARRA DE NAVEGACIÓN SUPERIOR ===== -->
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
     <nav class="navbar" id="mainNav">
 
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
@@ -67,10 +200,10 @@
 
     </nav>
 
-    <!-- ===== ENCABEZADO DE LA PÁGINA ===== -->
+    <!-- ENCABEZADO DE LA PÁGINA  -->
     <div class="Titulos">
         <h1>Introducción al Cáncer</h1>
-    </div>
+    </div> <br>
 
     <div class="fila-texto-img">
         <div class="content-text">
@@ -82,7 +215,37 @@
         </div>
 
         <div class="IMG">
-            <img src="../../MULTIMEDIA/cancer img 1.webp" alt="Concepto de células" class="IMG-TXT">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../../MULTIMEDIA/cancer img 1.webp" alt="Concepto de células" class="IMG-TXT">
+                    </div>
+                    <div class="flip-card-back">
+                        <span class="flip-icon">🎗️</span>
+                        <p>A nivel mundial, el cáncer es responsable de cerca de 1 de cada 6 muertes, pero la detección temprana y el acceso a tratamiento aumentan notablemente la supervivencia.</p>
+                    </div>
+                </div>
+                <span class="flip-hint">Pasa el mouse sobre la imagen para ver un dato rápido</span>
+            </div>
+        </div>
+    </div>
+
+    <!--  DATOS RÁPIDOS  -->
+    <div class="quick-stats">
+        <div class="stat-box">
+            <span class="stat-icon">🧬</span>
+            <span class="stat-number">200+</span>
+            <span class="stat-label">enfermedades agrupadas bajo el término "cáncer"</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-icon">🌍</span>
+            <span class="stat-number">1 de 6</span>
+            <span class="stat-label">muertes en el mundo están relacionadas con el cáncer</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-icon">🩺</span>
+            <span class="stat-number">↑</span>
+            <span class="stat-label">supervivencia con detección y tratamiento oportuno</span>
         </div>
     </div>
 
@@ -106,9 +269,100 @@
             <h3>Tratamientos Comunes</h3>
             <p>Dependiendo del tipo y etapa del diagnóstico, los tratamientos varían e incluyen enfoques como la cirugía, quimioterapia, radioterapia, inmunoterapia y terapias dirigidas, enfocadas en frenar o erradicar las células afectadas.</p>
         </div>
+
+        <div class="info-card">
+            <h3>Factores de Riesgo</h3>
+            <p>Existen factores que aumentan la probabilidad de desarrollar cáncer, como el historial familiar, la exposición a sustancias cancerígenas, infecciones virales persistentes, la edad avanzada y ciertos estilos de vida poco saludables.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Tipos Más Comunes</h3>
+            <p>Entre los tipos de cáncer con mayor incidencia se encuentran el de mama, próstata, pulmón, colorrectal y de piel. Cada uno presenta síntomas, factores de riesgo y protocolos de detección particulares.</p>
+        </div>
     </div>
 
-<!-- ===== PIE DE PÁGINA ===== -->
+    <!--  SEÑALES DE ALERTA -->
+    <div class="Titulos">
+        <h1>Señales de Alerta</h1>
+    </div><br>
+
+    <div class="fila-texto-img">
+        <div class="content-text">
+            <div class="Start">
+                <p>Reconocer a tiempo las señales que el cuerpo envía puede ser determinante para un diagnóstico oportuno. Ningún síntoma aislado confirma por sí solo la presencia de cáncer, pero su persistencia amerita siempre una consulta médica.</p>
+                <br>
+                <ul>
+                    <li>Bultos o masas palpables que no desaparecen con el tiempo.</li>
+                    <li>Cambios notorios en lunares, manchas o en el color de la piel.</li>
+                    <li>Pérdida de peso inexplicable y fatiga persistente.</li>
+                    <li>Sangrado o secreciones anormales fuera de lo habitual.</li>
+                    <li>Tos persistente, ronquera o dificultad para tragar.</li>
+                    <li>Cambios en los hábitos intestinales o urinarios.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="IMG">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../../MULTIMEDIA/chequeomedico.jpg" alt="Chequeo médico" class="IMG-TXT">
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Si alguna señal persiste por más de dos semanas, no esperes: agenda una cita con un profesional de la salud. Un diagnóstico a tiempo cambia por completo el pronóstico.</p>
+                    </div>
+                </div>
+            </div>
+            <span class="flip-hint">Pasa el mouse sobre la imagen para ver un consejo</span>
+        </div>
+    </div>
+
+    <div class="quick-stats">
+        <div class="stat-box">
+            <span class="stat-icon">⏱️</span>
+            <span class="stat-number">2+ semanas</span>
+            <span class="stat-label">de un síntoma persistente ya amerita consulta médica</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-icon">📅</span>
+            <span class="stat-number">1 al año</span>
+            <span class="stat-label">chequeo preventivo recomendado según tu edad y riesgo</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-icon">🗣️</span>
+            <span class="stat-number">100%</span>
+            <span class="stat-label">de los casos se benefician de hablarlo abiertamente con un médico</span>
+        </div>
+    </div>
+
+    <!--  MITOS Y REALIDADES  -->
+    <div class="Titulos">
+        <h1>Mitos y Realidades</h1>
+    </div><br>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Mito: El cáncer siempre es hereditario</h3>
+            <p>Realidad: Solo entre un 5% y un 10% de los casos se relacionan directamente con mutaciones genéticas heredadas; la mayoría se debe a factores ambientales y de estilo de vida.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Mito: El azúcar alimenta directamente al cáncer</h3>
+            <p>Realidad: Todas las células, sanas o cancerosas, necesitan glucosa para funcionar. Eliminar el azúcar no cura ni previene la enfermedad por sí solo.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Mito: Si no hay síntomas, no hay riesgo</h3>
+            <p>Realidad: Muchos tipos de cáncer son asintomáticos en etapas tempranas, por lo que los chequeos preventivos son esenciales incluso sin señales visibles.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Mito: El cáncer es siempre una sentencia de muerte</h3>
+            <p>Realidad: Gracias a los avances médicos, muchos tipos de cáncer detectados a tiempo tienen altas tasas de supervivencia y opciones de tratamiento efectivas.</p>
+        </div>
+    </div>
+
+<!--  PIE DE PÁGINA  -->
     <footer>
     <div class="footer-container">
         <div class="footer-content">

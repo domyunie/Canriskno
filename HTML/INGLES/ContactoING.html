@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contacts - Canrisk</title>
     <link rel="stylesheet" href="../../CSS/contacto.css">
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
-    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.png">
+    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
 </head>
 <body>
     
-    <!-- ===== LOGO AND SIDEBAR TOGGLE BUTTON ===== -->
+    <!--  LOGO AND SIDEBAR TOGGLE BUTTON  -->
     <div class="navbar-brand">
-        <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Abrir menú lateral">
+        <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Open side menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <h1>Canrisk</h1>
-        <img src="../../MULTIMEDIA/Canrisk LOGO.png" alt="Canrisk" class="C-L"> 
+        <img src="../../MULTIMEDIA/Canrisk LOGO.svg" alt="Canrisk" class="C-L"> 
     </div>
     
-    <!-- ===== SIDEBAR MENU ===== -->
+    <!-- SIDEBAR MENU  -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
@@ -30,35 +30,37 @@
         </div>
 
         <ul class="sidebar-list">
-            <li><a href="cancer-introING.html">Introduction to cancer &rarr;</a></li>
-            <li><a href="psychohelpING.html">Psychological support &rarr;</a></li>
+            <li><a href="cancer-introING.html">Introduction to Cancer &rarr;</a></li>
+            <li><a href="cancerING.html">Cancer Types &rarr;</a></li>
+            <li><a href="psycho-helpING.html">Psychological Support &rarr;</a></li>
             <li><a href="helpING.html">Help Center &rarr;</a></li>
-            <li><a href="quizzING.html">Quizz &rarr;</a></li>
+            <li><a href="quizzING.html">Quiz &rarr;</a></li>
+            <li><a href="faqING.html">Frequently Asked Questions &rarr;</a></li>
         </ul>
     </nav>
-
-    <!-- ===== SIDEBAR DARK OVERLAY ===== -->
+    
+    <!--  SIDEBAR DARK OVERLAY  -->
     <div class="overlay-menu" id="menuOverlay"></div>
  
-    <!-- ===== TOP NAVIGATION BAR ===== -->
+    <!--  TOP NAVIGATION BAR -->
     <nav class="navbar" id="mainNav">
  
-        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
  
         <ul class="Info-nav">
-            <li class="box-II"><h4><a href="PrincipalING.html">Start</a></h4></li>
+            <li class="box-II"><h4><a href="PrincipalING.html">Home Page</a></h4></li>
             <li class="box-II"><a href="aboutusENG.html"><h4>About Us</h4></a></li>
-            <li class="box-II"><a href="ContactoING.html"><h4>Contact us</h4></a></li>
+            <li class="box-II"><a href="ContactoING.html"><h4>Contact Us</h4></a></li>
         </ul>
  
         <div class="right-group">
             <ul class="Index">
-                <li class="box-I"><a href="loginING.html"><h4>Log In</h4></a></li>
-                <li class="box-I"><a href="registerING.html"><h4>Sign up</h4></a></li>
+                <li class="box-I"><a href="loginING.html"><h4>Log in</h4></a></li>
+                <li class="box-I"><a href="registerING.html"><h4>Sign Up</h4></a></li>
             </ul>
             <a id="langSwitch" class="lang-switch" href="#" aria-label="Cambiar idioma / Switch language">ES</a>
             <div class="Photo">
@@ -68,16 +70,48 @@
  
     </nav>
  
+      <!--  PAGE HEADER  -->
+    <header class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">Contacts</h1>
+            <p class="hero-subtitle">Phone numbers for hospitals that treat cancer</p>
+        </div>
+      </header>
+
     <main class="contacto-main">
- 
-        <div class="contacto-intro">
-            <h2>Contact us</h2>
+        <!-- INTRODUCTION -->
+        <div class="contacto-intro-box">
+            <p>
+                Finding the right number in an urgent situation shouldn't be difficult.
+                That’s why we’ve gathered contact details for El Salvador’s main public
+                hospitals that treat cancer—along with our own technical support—all in one place.
+                Use the search bar to filter by hospital name or department,
+                or simply browse the full list below.
+            </p>
         </div>
 
-        <div class="contacto-intro" style="margin-top: 40px;">
-            <h2 style="font-size: 1.5rem; letter-spacing: 1px;">Phone numbers for hospitals that treat cancer</h2>
+        <!-- MINI STATISTICS -->
+        <div class="contacto-stats">
+            <div class="stat-pill">
+                <strong>15</strong>
+                <span>Hospitals</span>
+            </div>
+            <div class="stat-pill">
+                <strong>6</strong>
+                <span>Departments covered</span>
+            </div>
+            <div class="stat-pill">
+                <strong>24/7</strong>
+                <span>Most offer continuous service</span>
+            </div>
         </div>
- 
+
+        <!-- INTERACTIVE SEARCH -->
+        <div class="contacto-buscador">
+            <input type="text" id="buscadorHospital" placeholder="Search by hospital or department (e.g., Santa Ana)">
+            <p class="buscador-resultado" id="buscadorResultado"></p>
+        </div>
+
         <div class="contacto-grid">
 
             <div class="contacto-card">
@@ -137,7 +171,7 @@
                 <h3>El Salvador Cancer Institute</h3>
                 <a class="dato" href="tel:+50322254354">2225-4354</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">San Salvador</p>
-                <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">Service Mon - Fri: 7:00 AM - 4:00 PM</p>
+                <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">Mon - Fri: 7:00 AM - 4:00 PM</p>
             </div>
 
             <div class="contacto-card">
@@ -146,7 +180,7 @@
                         <path d="M4 5c0-1 1-2 2-2h2l2 5-2 2c1 3 3 5 6 6l2-2 5 2v2c0 1-1 2-2 2C10 20 4 14 4 5z"/>
                     </svg>
                 </div>
-                <h3>"San Juan de Dios" National Hospital of Santa Ana</h3>
+                <h3>"San Juan de Dios" National Hospital, Santa Ana</h3>
                 <a class="dato" href="tel:+50324840300">2484-0300</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">Santa Ana</p>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
@@ -158,7 +192,7 @@
                         <path d="M4 5c0-1 1-2 2-2h2l2 5-2 2c1 3 3 5 6 6l2-2 5 2v2c0 1-1 2-2 2C10 20 4 14 4 5z"/>
                     </svg>
                 </div>
-                <h3>"San Juan de Dios" National Hospital of San Miguel</h3>
+                <h3>"San Juan de Dios" National Hospital, San Miguel</h3>
                 <a class="dato" href="tel:+50326842700">2684-2700</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">San Miguel</p>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
@@ -173,7 +207,7 @@
                 <h3>ISSS Medical-Surgical Hospital</h3>
                 <a class="dato" href="tel:+50325914100">2591-4100</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">San Salvador</p>
-                <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">Servicio las 24 horas.</p>
+                <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
             </div>
 
             <div class="contacto-card">
@@ -182,7 +216,7 @@
                         <path d="M4 5c0-1 1-2 2-2h2l2 5-2 2c1 3 3 5 6 6l2-2 5 2v2c0 1-1 2-2 2C10 20 4 14 4 5z"/>
                     </svg>
                 </div>
-                <h3>ISSS Santa Ana Regional Hospital</h3>
+                <h3>ISSS Regional Hospital, Santa Ana</h3>
                 <a class="dato" href="tel:+50324891400">2489-1400</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">Santa Ana</p>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
@@ -194,7 +228,7 @@
                         <path d="M4 5c0-1 1-2 2-2h2l2 5-2 2c1 3 3 5 6 6l2-2 5 2v2c0 1-1 2-2 2C10 20 4 14 4 5z"/>
                     </svg>
                 </div>
-                <h3>ISSS San Miguel Regional Hospital</h3>
+                <h3>ISSS Regional Hospital, San Miguel</h3>
                 <a class="dato" href="tel:+50326651200">2665-1200</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">San Miguel</p>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
@@ -242,7 +276,7 @@
                         <path d="M4 5c0-1 1-2 2-2h2l2 5-2 2c1 3 3 5 6 6l2-2 5 2v2c0 1-1 2-2 2C10 20 4 14 4 5z"/>
                     </svg>
                 </div>
-                <h3>Zacamil ISSS Polyclinic Hospital</h3>
+                <h3>ISSS Zacamil Polyclinic Hospital</h3>
                 <a class="dato" href="tel:+50325916600">2591-6600</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">Mejicanos</p>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
@@ -254,7 +288,7 @@
                         <path d="M4 5c0-1 1-2 2-2h2l2 5-2 2c1 3 3 5 6 6l2-2 5 2v2c0 1-1 2-2 2C10 20 4 14 4 5z"/>
                     </svg>
                 </div>
-                <h3>HSanta Teresa National Hospital</h3>
+                <h3>Santa Teresa National Hospital</h3>
                 <a class="dato" href="tel:+50323624300">2362-4300</a>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; margin-top: 4px;">Zacatecoluca</p>
                 <p class="dato" style="font-weight: 400; font-size: 0.85rem; color: #a1a1a1;">24-hour service.</p>
@@ -276,19 +310,6 @@
                 <h3>Phone number</h3>
                 <a class="dato" href="tel:+50389905890">8990-5890</a>
             </div>
- 
-            <div class="contacto-card">
-                <div class="icono-card" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <rect x="3" y="3" width="18" height="18" rx="5"/>
-                        <circle cx="12" cy="12" r="4"/>
-                        <circle cx="17.2" cy="6.8" r="1"/>
-                    </svg>
-                </div>
-                <h3>Social Medias</h3>
-                <a class="dato" href="#">Instagram — @canrisk</a>
-                <a class="dato" href="#">TikTok — @canrisk</a>
-            </div>
 
             <div class="contacto-card">
                 <div class="icono-card" aria-hidden="true">
@@ -301,13 +322,54 @@
                 <a class="dato" href="mailto:soporte@canrisk.com">soporte@canrisk.com</a>
             </div>
         </div>
- 
+<!-- ACCORDION: QUICK QUESTIONS ON WHO TO CALL -->
+        <div class="contacto-faq">
+            <h2 class="contacto-faq-titulo">Quick questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-pregunta" type="button">
+                    When should I call 911 instead of the hospital?
+                </button>
+                <div class="faq-respuesta">
+                    <p>
+                        Call 911 if there is an immediate, life-threatening emergency:
+                        difficulty breathing, uncontrollable bleeding, severe chest pain,
+                        or loss of consciousness. For appointments, test results, or
+                        questions about treatment, contact the hospital directly.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pregunta" type="button">
+                    Who should I call if I don't know which hospital I am assigned to?
+                </button>
+                <div class="faq-respuesta">
+                    <p>
+                        You can contact the El Salvador Cancer Institute or the
+                        public hospital nearest your home; they can provide guidance
+                        and, if necessary, refer you to the appropriate specialized center.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pregunta" type="button">
+                    Does Canrisk technical support handle medical questions?
+                </button>
+                <div class="faq-respuesta">
+                    <p>
+                        No. Our support team only resolves platform-related issues,
+                        such as errors when logging in or using the questionnaire. For medical
+                        inquiries, please contact a hospital or healthcare professional.
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="contacto-lema">
             <p>Get informed with us</p>
         </div>
-        
     </main>
-<!-- ===== FOOTER ===== -->
+
+<!--  FOOTER  -->
     <footer>
     <div class="footer-container">
         <div class="footer-content">
@@ -340,6 +402,7 @@
         </div>
     </div>
 </footer>
+
     <script>
         const btn = document.getElementById('hamburgerBtn');
         const nav = document.getElementById('mainNav');
@@ -362,7 +425,54 @@
 
         sidebarBtn.addEventListener('click', toggleSidebar);
         menuOverlay.addEventListener('click', toggleSidebar);
+
+        // BUSCADOR INTERACTIVO DE HOSPITALES
+        const inputBuscador = document.getElementById('buscadorHospital');
+        const resultadoTexto = document.getElementById('buscadorResultado');
+        const tarjetas = document.querySelectorAll('#gridHospitales .contacto-card');
+
+        inputBuscador.addEventListener('input', () => {
+            const termino = inputBuscador.value.trim().toLowerCase();
+            let visibles = 0;
+
+            tarjetas.forEach(tarjeta => {
+                const nombre = (tarjeta.dataset.nombre || '').toLowerCase();
+                const depto = (tarjeta.dataset.depto || '').toLowerCase();
+                const coincide = nombre.includes(termino) || depto.includes(termino);
+
+                tarjeta.classList.toggle('oculta', !coincide);
+                if (coincide) visibles++;
+            });
+
+            if (termino === '') {
+                resultadoTexto.textContent = '';
+            } else if (visibles === 0) {
+                resultadoTexto.textContent = 'No hospitals were found matching that criterion.';
+            } else {
+                resultadoTexto.textContent = `${visibles} hospital(s) found.`;
+            }
+        });
+
+        // ACORDEÓN DE PREGUNTAS RÁPIDAS
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const pregunta = item.querySelector('.faq-pregunta');
+            const respuesta = item.querySelector('.faq-respuesta');
+
+            pregunta.addEventListener('click', () => {
+                const estaAbierto = item.classList.contains('abierto');
+
+                document.querySelectorAll('.faq-item.abierto').forEach(otro => {
+                    otro.classList.remove('abierto');
+                    otro.querySelector('.faq-respuesta').style.maxHeight = null;
+                });
+
+                if (!estaAbierto) {
+                    item.classList.add('abierto');
+                    respuesta.style.maxHeight = respuesta.scrollHeight + 'px';
+                }
+            });
+        });
     </script>
-        <script src="../../JS/site.js" defer></script>
+    <script src="../../JS/site.js" defer></script>
 </body>
 </html>
