@@ -7,7 +7,40 @@
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
     <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
     <style>
-        /*  FLIP CARD  */
+        /* ===== 2 ROWS BY 3 COLUMNS LAYOUT ===== */
+        .info-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 20px !important;
+            width: 100% !important;
+            max-width: 1200px;
+            margin: 2rem auto !important;
+            padding: 0 1rem;
+            box-sizing: border-box !important;
+        }
+
+        .info-grid .info-card {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+        }
+
+        /* Responsive adjustments for small screens */
+        @media (max-width: 900px) {
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* ===== ROTATING CARD (FLIP CARD) ===== */
         .flip-card {
             perspective: 1200px;
             width: 100%;
@@ -79,7 +112,7 @@
             opacity: 0.7;
         }
 
-        /*  QUICK STATS BLOCK */
+        /* ===== QUICK STATS BLOCK ===== */
         .quick-stats {
             display: flex;
             flex-wrap: wrap;
@@ -119,7 +152,7 @@
             color: #555;
         }
 
-        /*  ICONS IN TITLES AND LISTS  */
+        /* ===== ICONS IN TITLES AND LISTS ===== */
         .info-card h3 .card-icon {
             margin-right: 0.4rem;
         }
@@ -140,9 +173,8 @@
 </head>
 <body>
 
-    <!--  LOGO AND SIDEBAR TOGGLE BUTTON -->
     <div class="navbar-brand">
-        <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Open side menu">
+        <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Open sidebar menu">
             <span></span>
             <span></span>
             <span></span>
@@ -151,7 +183,6 @@
         <img src="../../MULTIMEDIA/Canrisk LOGO.svg" alt="Canrisk" class="C-L"> 
     </div>
 
-    <!--  SIDEBAR MENU  -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
@@ -160,19 +191,17 @@
         </div>
         
         <ul class="sidebar-list">
-            <li><a href="cancer-introING.html">Introduction to Cancer &rarr;</a></li>
-            <li><a href="cancerING.html">Cancer Types &rarr;</a></li>
-            <li><a href="psycho-helpING.html">Psychological Support &rarr;</a></li>
-            <li><a href="helpING.html">Help Center &rarr;</a></li>
-            <li><a href="quizzING.html">Quiz &rarr;</a></li>
-            <li><a href="faqING.html">Frequently Asked Questions &rarr;</a></li>
+            <li><a href="../INGLES/cancer-introING.html">Introduction to Cancer &rarr;</a></li>
+            <li><a href="../INGLES/CancerING.html">Types of Cancer &rarr;</a></li>
+            <li><a href="../INGLES/psycho-helpING.html">Psychological Support &rarr;</a></li>
+            <li><a href="../INGLES/helpING.html">Help Center &rarr;</a></li>
+            <li><a href="../INGLES/quizzING.html">Quiz &rarr;</a></li>
+            <li><a href="..//INGLES/faqING.html">Frequently Asked Questions &rarr;</a></li>
         </ul>
     </nav>
     
-    <!--  SIDEBAR DARK OVERLAY  -->
     <div class="overlay-menu" id="menuOverlay"></div>
 
-    <!-- TOP NAVIGATION BAR -->
     <nav class="navbar" id="mainNav">
 
         <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
@@ -182,17 +211,17 @@
         </button>
 
         <ul class="Info-nav">
-            <li class="box-II"><h4><a href="PrincipalING.html">Home Page</a></h4></li>
-            <li class="box-II"><a href="aboutusENG.html"><h4>About Us</h4></a></li>
-            <li class="box-II"><a href="ContactoING.html"><h4>Contact Us</h4></a></li>
+            <li class="box-II"><h4><a href="../INGLES/PrincipalING.html">Home</a></h4></li>
+            <li class="box-II"><a href="../INGLES/aboutusENG.html"><h4>About Us</h4></a></li>
+            <li class="box-II"><a href="../INGLES/ContactoING.html"><h4>Contact Us</h4></a></li>
         </ul>
 
         <div class="right-group">
             <ul class="Index">
-                <li class="box-I"><a href="loginING.html"><h4>Log in</h4></a></li>
-                <li class="box-I"><a href="registerING.html"><h4>Sign Up</h4></a></li>
+                <li class="box-I"><a href="../../HTML/INGLES/loginING.html"><h4>Log In</h4></a></li>
+                <li class="box-I"><a href="../../HTML/INGLES/registerING.html"><h4>Sign Up</h4></a></li>
             </ul>
-            <a id="langSwitch" class="lang-switch" href="#" aria-label="Cambiar idioma / Switch language">ES</a>
+            <a id="langSwitch" class="lang-switch" href="#" aria-label="Switch language">EN</a>
             <div class="Photo">
                 <img src="../../MULTIMEDIA/profile.png" class="PP-default" alt="User profile picture">
             </div>
@@ -200,7 +229,6 @@
 
     </nav>
 
-    <!-- PAGE HEADER  -->
     <div class="Titulos">
         <h1>Introduction to Cancer</h1>
     </div> <br>
@@ -208,9 +236,9 @@
     <div class="fila-texto-img">
         <div class="content-text">
             <div class="Start">
-                <p>Cancer is not a single disease but a broad term used to describe a group of more than 200 different diseases characterized by the uncontrolled growth and spread of abnormal cells in the body. If this process is not controlled or detected in time, it can compromise the function of vital organs and spread to other parts of the body.</p>
+                <p>Cancer is not a single disease, but a broad term used to describe a group of more than 200 different diseases characterized by the uncontrolled growth and spread of abnormal cells in the body. If this process is not controlled or detected early, it can compromise the function of vital organs and spread to other parts of the body.</p>
                 <br>
-                <p>Understanding the basics of cell development, risk factors, and the importance of early diagnosis is the essential first step toward prevention, comprehensive patient support, and reducing associated risks.</p>
+                <p>Understanding the basics of cellular development, risk factors, and the importance of early diagnosis is the fundamental first step toward prevention, comprehensive patient support, and reducing associated risks.</p>
             </div>
         </div>
 
@@ -218,19 +246,18 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../../MULTIMEDIA/cancer img 1.webp" alt="Concepto de células" class="IMG-TXT">
+                        <img src="../../MULTIMEDIA/cancer img 1.webp" alt="Cell concept" class="IMG-TXT">
                     </div>
                     <div class="flip-card-back">
                         <span class="flip-icon">🎗️</span>
-                        <p>Worldwide, cancer is responsible for about 1 in 6 deaths, but early detection and access to treatment significantly increase survival.</p>
+                        <p>Globally, cancer is responsible for nearly 1 in 6 deaths, but early detection and access to treatment significantly increase survival rates.</p>
                     </div>
                 </div>
-                <span class="flip-hint">Hover over the image for a quick fact</span>
+                <span class="flip-hint">Hover over the image to see a quick fact</span>
             </div>
         </div>
     </div>
 
-    <!--  QUICK FACTS  -->
     <div class="quick-stats">
         <div class="stat-box">
             <span class="stat-icon">🧬</span>
@@ -245,43 +272,42 @@
         <div class="stat-box">
             <span class="stat-icon">🩺</span>
             <span class="stat-number">↑</span>
-            <span class="stat-label">survival with timely detection and treatment</span>
+            <span class="stat-label">survival rate with timely detection and treatment</span>
         </div>
     </div>
 
     <div class="info-grid">
         <div class="info-card">
             <h3>How Does It Start?</h3>
-            <p>It begins when the control mechanisms of cellular DNA undergo mutations. Instead of aging and dying, these damaged cells survive and keep dividing without restraint, potentially forming masses called tumors.</p>
+            <p>It begins when cellular DNA control mechanisms undergo mutations. Instead of aging and dying, these damaged cells survive and continue to divide uncontrollably, potentially forming masses known as tumors.</p>
         </div>
 
         <div class="info-card">
             <h3>Prevention</h3>
-            <p>Many types of cancer can be prevented or reduced by adopting healthy habits: eating a balanced diet, avoiding tobacco and alcohol use, protecting your skin from the sun, and getting daily physical activity.</p>
+            <p>Many types of cancer can be prevented or mitigated by adopting healthy habits: maintaining a balanced diet, avoiding tobacco and alcohol consumption, protecting your skin from the sun, and engaging in daily physical activity.</p>
         </div>
 
         <div class="info-card">
             <h3>Early Detection</h3>
-            <p>Identifying abnormalities at early stages through self-exams, mammograms, or routine check-ups significantly increases the effectiveness of current medical treatments.</p>
+            <p>Identifying abnormalities at early stages through self-examinations, mammograms, or routine checkups significantly increases the effectiveness of current medical treatments.</p>
         </div>
 
         <div class="info-card">
             <h3>Common Treatments</h3>
-            <p>Depending on the type and stage of the diagnosis, treatments vary and include approaches such as surgery, chemotherapy, radiation therapy, immunotherapy, and targeted therapies, all aimed at slowing or eliminating affected cells.</p>
+            <p>Depending on the type and stage of the diagnosis, treatments vary and include approaches such as surgery, chemotherapy, radiation therapy, immunotherapy, and targeted therapies focused on stopping or eliminating affected cells.</p>
         </div>
 
         <div class="info-card">
             <h3>Risk Factors</h3>
-            <p>Certain factors increase the likelihood of developing cancer, such as family history, exposure to carcinogenic substances, persistent viral infections, advanced age, and certain unhealthy lifestyle habits.</p>
+            <p>Certain factors increase the likelihood of developing cancer, such as family history, exposure to carcinogenic substances, persistent viral infections, advanced age, and certain unhealthy lifestyle choices.</p>
         </div>
 
         <div class="info-card">
             <h3>Most Common Types</h3>
-            <p>Among the most common types of cancer are breast, prostate, lung, colorectal, and skin cancer. Each presents its own symptoms, risk factors, and detection protocols.</p>
+            <p>Among the types of cancer with the highest incidence are breast, prostate, lung, colorectal, and skin cancer. Each presents specific symptoms, risk factors, and screening protocols.</p>
         </div>
     </div>
 
-    <!--  WARNING SIGNS -->
     <div class="Titulos">
         <h1>Warning Signs</h1>
     </div><br>
@@ -289,15 +315,15 @@
     <div class="fila-texto-img">
         <div class="content-text">
             <div class="Start">
-                <p>Recognizing the signs the body sends in time can be decisive for a timely diagnosis. No single symptom on its own confirms the presence of cancer, but persistence always warrants a medical consultation.</p>
+                <p>Recognizing the warning signs sent by the body in time can be decisive for a timely diagnosis. No single symptom alone confirms the presence of cancer, but its persistence always warrants a medical consultation.</p>
                 <br>
                 <ul>
-                    <li>Lumps or palpable masses that don't go away over time.</li>
+                    <li>Lumps or palpable masses that do not go away over time.</li>
                     <li>Noticeable changes in moles, spots, or skin color.</li>
                     <li>Unexplained weight loss and persistent fatigue.</li>
-                    <li>Abnormal bleeding or discharge outside the usual.</li>
+                    <li>Unusual bleeding or abnormal discharge.</li>
                     <li>Persistent cough, hoarseness, or difficulty swallowing.</li>
-                    <li>Changes in bowel or urinary habits.</li>
+                    <li>Changes in bowel or bladder habits.</li>
                 </ul>
             </div>
         </div>
@@ -306,14 +332,14 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../../MULTIMEDIA/chequeomedico.jpg" alt="Chequeo médico" class="IMG-TXT">
+                        <img src="../../MULTIMEDIA/chequeomedico.jpg" alt="Medical checkup" class="IMG-TXT">
                     </div>
                     <div class="flip-card-back">
-                        <p>If any sign persists for more than two weeks, don't wait: schedule an appointment with a healthcare professional. A timely diagnosis completely changes the outlook.</p>
+                        <p>If any sign persists for more than two weeks, don't wait: schedule an appointment with a healthcare professional. A timely diagnosis completely changes the prognosis.</p>
                     </div>
                 </div>
+                <span class="flip-hint">Hover over the image to see a tip</span>
             </div>
-            <span class="flip-hint">Hover over the image for a tip</span>
         </div>
     </div>
 
@@ -321,80 +347,78 @@
         <div class="stat-box">
             <span class="stat-icon">⏱️</span>
             <span class="stat-number">2+ weeks</span>
-            <span class="stat-label">of a persistent symptom already warrants a medical visit</span>
+            <span class="stat-label">of a persistent symptom already warrants a medical consultation</span>
         </div>
         <div class="stat-box">
             <span class="stat-icon">📅</span>
             <span class="stat-number">1 per year</span>
-            <span class="stat-label">preventive check-up recommended based on your age and risk</span>
+            <span class="stat-label">preventive checkup recommended based on your age and risk</span>
         </div>
         <div class="stat-box">
             <span class="stat-icon">🗣️</span>
             <span class="stat-number">100%</span>
-            <span class="stat-label">of cases benefit from talking openly with a doctor</span>
+            <span class="stat-label">of cases benefit from speaking openly with a doctor</span>
         </div>
     </div>
 
-    <!--  MYTHS AND FACTS  -->
     <div class="Titulos">
-        <h1>Myths and Facts</h1>
+        <h1>Myths and Realities</h1>
     </div><br>
 
-    <div class="info-grid">
+    <div class="info-grid" style="grid-template-columns: repeat(2, 1fr) !important;">
         <div class="info-card">
             <h3>Myth: Cancer is always hereditary</h3>
-            <p>Fact: Only 5% to 10% of cases are directly linked to inherited genetic mutations; most cases are due to environmental and lifestyle factors.</p>
+            <p>Reality: Only between 5% and 10% of cases are directly linked to inherited genetic mutations; the majority are due to environmental and lifestyle factors.</p>
         </div>
 
         <div class="info-card">
             <h3>Myth: Sugar directly feeds cancer</h3>
-            <p>Fact: All cells, healthy or cancerous, need glucose to function. Cutting out sugar does not cure or prevent the disease on its own.</p>
+            <p>Reality: All cells, healthy or cancerous, require glucose to function. Eliminating sugar alone does not cure or prevent the disease.</p>
         </div>
 
         <div class="info-card">
-            <h3>Myth: No symptoms means no risk</h3>
-            <p>Fact: Many types of cancer are asymptomatic in early stages, which is why preventive check-ups are essential even without visible signs.</p>
+            <h3>Myth: If there are no symptoms, there is no risk</h3>
+            <p>Reality: Many types of cancer are asymptomatic in early stages, making preventive checkups essential even without visible signs.</p>
         </div>
 
         <div class="info-card">
             <h3>Myth: Cancer is always a death sentence</h3>
-            <p>Fact: Thanks to medical advances, many types of cancer detected early have high survival rates and effective treatment options.</p>
+            <p>Reality: Thanks to medical advances, many types of cancer detected early have high survival rates and effective treatment options.</p>
         </div>
     </div>
 
-<!--  FOOTER  -->
     <footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h2 class="Title">COPYRIGHT</h2>
-                <ul class="Advice">
-                    <li>&copy; Canrisk 2026</li>
-                    <li>&copy; All rights reserved to the Canrisk team</li>
-                    <li>Special thanks to the Canrisk team</li>
-                    <li>who have made this page possible.</li>
-                </ul>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h2 class="Title">COPYRIGHT</h2>
+                    <ul class="Advice">
+                        <li>&copy; Canrisk 2026</li>
+                        <li>&copy; All rights reserved to the Canrisk team</li>
+                        <li>Special thanks to the Canrisk team</li>
+                        <li>who made this website possible.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2 class="Title_1">IMPORTANT INFORMATION</h2>
+                    <ul class="Advice_1">
+                        <li>This page does NOT replace professional medical advice.</li>
+                        <li>In case of an emergency or symptom, please rely on</li>
+                        <li>the various hospital emergency numbers provided,</li>
+                        <li>or call 911 directly.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h2 class="Title_1">IMPORTANT INFORMATION</h2>
-                <ul class="Advice_1">
-                    <li>This page DOES NOT replace the help of a medical professional.</li>
-                    <li>In case you have any type of emergency or a symptom you can</li>
-                    <li>rely on the different numbers of hospitals that we</li>
-                    <li>we provide, or call 911 directly.</li>
+            <div class="footer-social">
+                <h2 class="Title_2">Canrisk Social Media!</h2>
+                <ul class="Social">
+                    <li><a href="https://www.instagram.com/canrisk/" target="_blank"><img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo"><p class="Inst-txt">Instagram</p></a></li>
+                    <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank"><img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo"><p class="Face-txt">Facebook</p></a></li>
+                    <li><a href="https://twitter.com/Canrisk1" target="_blank"><img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter logo"><p class="Twit-txt">Twitter</p></a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-social">
-            <h2 class="Title_2">Canrisk social networks!</h2>
-            <ul class="Social">
-                <li><a href="https://www.instagram.com/canrisk/" target="_blank"><img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo"><p class="Inst-txt">Instagram</p></a></li>
-                <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank"><img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo"><p class="Face-txt">Facebook</p></a></li>
-                <li><a href="https://twitter.com/Canrisk1" target="_blank"><img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter"><p class="Twit-txt">Twitter</p></a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
     
     <script>
         const btn = document.getElementById('hamburgerBtn');

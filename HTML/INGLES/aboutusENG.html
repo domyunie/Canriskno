@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
     <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
     <style>
-        /* ===== FLIP CARD ===== */
+        /* FLIP CARD — styling */
         .IMG .flip-card {
             perspective: 1200px;
             width: 100%;
@@ -78,13 +78,26 @@
             text-align: center;
             opacity: 0.7;
         }
+
+        .info-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            justify-content: center !important;
+            align-items: stretch !important;
+            gap: 20px !important;
+            width: 100% !important;
+        }
+
+        .info-grid .info-card {
+            flex: 0 1 auto !important; 
+        }
     </style>
 </head>
 <body>
  
-    <!--  LOGO AND SIDEBAR TOGGLE BUTTON  -->
     <div class="navbar-brand">
-        <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Open side menu">
+        <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Open sidebar menu">
             <span></span>
             <span></span>
             <span></span>
@@ -93,7 +106,6 @@
         <img src="../../MULTIMEDIA/Canrisk LOGO.svg" alt="Canrisk" class="C-L"> 
     </div>
     
-    <!--  SIDEBAR MENU  -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
@@ -102,19 +114,17 @@
         </div>
 
         <ul class="sidebar-list">
-            <li><a href="cancer-introING.html">Introduction to Cancer &rarr;</a></li>
-            <li><a href="cancerING.html">Cancer Types &rarr;</a></li>
-            <li><a href="psycho-helpING.html">Psychological Support &rarr;</a></li>
-            <li><a href="helpING.html">Help Center &rarr;</a></li>
-            <li><a href="quizzING.html">Quiz &rarr;</a></li>
-            <li><a href="faqING.html">Frequently Asked Questions &rarr;</a></li>
+            <li><a href="../INGLES/cancer-introING.html">Introduction to Cancer &rarr;</a></li>
+            <li><a href="../INGLES/CancerING.html">Types of Cancer &rarr;</a></li>
+            <li><a href="../INGLES/psycho-helpING.html">Psychological Support &rarr;</a></li>
+            <li><a href="../INGLES/helpING.html">Help Center &rarr;</a></li>
+            <li><a href="../INGLES/quizzING.html">Quiz &rarr;</a></li>
+            <li><a href="..//INGLES/faqING.html">Frequently Asked Questions &rarr;</a></li>
         </ul>
     </nav>
 
-    <!--  SIDEBAR DARK OVERLAY  -->
     <div class="overlay-menu" id="menuOverlay"></div>
  
-    <!--  TOP NAVIGATION BAR  -->
     <nav class="navbar" id="mainNav">
  
         <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
@@ -124,17 +134,17 @@
         </button>
  
         <ul class="Info-nav">
-            <li class="box-II"><h4><a href="PrincipalING.html">Home Page</a></h4></li>
-            <li class="box-II"><a href="aboutusENG.html"><h4>About Us</h4></a></li>
-            <li class="box-II"><a href="ContactoING.html"><h4>Contact Us</h4></a></li>
+            <li class="box-II"><h4><a href="../INGLES/PrincipalING.html">Home</a></h4></li>
+            <li class="box-II"><a href="../INGLES/aboutusENG.html"><h4>About Us</h4></a></li>
+            <li class="box-II"><a href="../INGLES/ContactoING.html"><h4>Contact Us</h4></a></li>
         </ul>
  
         <div class="right-group">
             <ul class="Index">
-                <li class="box-I"><a href="loginING.html"><h4>Log in</h4></a></li>
-                <li class="box-I"><a href="registerING.html"><h4>Sign Up</h4></a></li>
+                <li class="box-I"><a href="../../HTML/INGLES/loginING.html"><h4>Log In</h4></a></li>
+                <li class="box-I"><a href="../../HTML/INGLES/registerING.html"><h4>Sign Up</h4></a></li>
             </ul>
-            <a id="langSwitch" class="lang-switch" href="#" aria-label="Cambiar idioma / Switch language">ES</a>
+            <a id="langSwitch" class="lang-switch" href="#" aria-label="Switch language">EN</a>
             <div class="Photo">
                 <img src="../../MULTIMEDIA/profile.png" class="PP-default" alt="User profile picture">
             </div>
@@ -142,16 +152,12 @@
  
     </nav>
  
-    <!--  PAGE HEADER  -->
     <header class="hero-section">
         <div class="hero-container">
             <h1 class="hero-title">About Us</h1>
  
             <div class="hero-subtitle">
-                <p>Canrisk is an informational website whose purpose is 
-                    to inform society in an accessible and reliable way about
-                    the most common types of cancer among the Salvadoran population: 
-                    breast, cervical, prostate, stomach, and lung cancer.
+                <p>Canrisk is an informational website aimed at providing the general public with accessible and reliable information about the most common types of cancer in the Salvadoran population: breast, cervical, prostate, stomach, and lung cancer.
                 </p>
             </div>
         </div>
@@ -160,25 +166,21 @@
     <div class="contenedor-flex-lateral">
         <div class="bloque-tarjetas-originales">
             <div class="content-text">
-                <p>Our project is called <strong class="Negrita">Canrisk</strong> because
-                it comes from combining two words: cancer and <em>risk</em>. We chose that
-                fusion to give the site a warm and easy-to-remember identity.</p>
+                <p>Our project is named <strong class="Negrita">Canrisk</strong> because it combines two words: cancer and <em>risk</em>. We chose this fusion to give the platform an approachable and easy-to-remember identity.</p>
             </div>
         </div>
 
-           <div class="IMG">
+        <div class="IMG">
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../../MULTIMEDIA/cancer imagen.jpg" alt="Equipo de Canrisk" class="IMG-TXT">
+                        <img src="../../MULTIMEDIA/cancer imagen.jpg" alt="Canrisk Team" class="IMG-TXT">
                     </div>
                     <div class="flip-card-back">
-                        <p>This project was created by a team of
-                        students committed to bringing reliable medical information to those who
-                        need it most.</p>
+                        <p>This project was created by a team of students committed to providing reliable medical information to those who need it most.</p>
                     </div>
                 </div>
-                <span class="flip-hint">Hover over the image for a quick fact</span>
+                <span class="flip-hint">Hover over the image to see a quick fact</span>
             </div>
         </div>
     </div>
@@ -188,60 +190,56 @@
         <div class="info-grid">
             <div class="info-card">
                 <h3>Our Mission</h3>
-                <p>Bring clear and reliable medical information about breast, cervical,
-                    prostate, stomach, and lung cancer to the Salvadoran population, without unnecessary jargon.</p>
+                <p>To provide clear and reliable medical information about breast, cervical, prostate, stomach, and lung cancer to the Salvadoran population, without unnecessary technical jargon.</p>
             </div>
             <div class="info-card">
                 <h3>Our Approach</h3>
-                <p>We support both the patient and the family: prevention, emotional support, and
-                    practical guidance in one place.</p>
+                <p>We support both patients and their families by offering prevention tips, emotional support, and practical guidance all in one place.</p>
             </div>
             <div class="info-card">
                 <h3>Our Commitment</h3>
-                <p>The privacy of everyone who visits us is non-negotiable. All the information you share
-                    with us is handled with the utmost care.</p>
+                <p>The privacy of our visitors is non-negotiable. Any information shared with us is handled with the utmost care and confidentiality.</p>
             </div>
         </div>
     </section>
  
-<!--  FOOTER -->
     <footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h2 class="Title">COPYRIGHT</h2>
-                <ul class="Advice">
-                    <li>&copy; Canrisk 2026</li>
-                    <li>&copy; All rights reserved to the Canrisk team. Special thanks to the Canrisk team who have made this page possible.</li>
-                </ul>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h2 class="Title">COPYRIGHT</h2>
+                    <ul class="Advice">
+                        <li>&copy; Canrisk 2026</li>
+                        <li>&copy; All rights reserved to the Canrisk team. Special thanks to everyone on the Canrisk team who made this website possible.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2 class="Title_1">IMPORTANT INFORMATION</h2>
+                    <ul class="Advice_1">
+                        <li>This page does NOT replace professional medical advice.</li>
+                        <li>In case of an emergency or symptom, please rely on the hospital emergency numbers provided or call 911 directly.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h2 class="Title_1">IMPORTANT INFORMATION</h2>
-                <ul class="Advice_1">
-                    <li>This page DOES NOT replace the help of a medical professional.</li>
-                    <li>In case you have any type of emergency or a symptom, you can rely on the different hospital numbers that we provide, or call 911 directly.</li>
+            <div class="footer-social">
+                <h2 class="Title_2">Canrisk Social Media!</h2>
+                <ul class="Social">
+                    <li><a href="https://www.instagram.com/canrisk/" target="_blank">
+                        <img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo">
+                        <span class="Inst-txt">Instagram</span>
+                    </a></li>
+                    <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank">
+                        <img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo">
+                        <span class="Face-txt">Facebook</span>
+                    </a></li>
+                    <li><a href="https://twitter.com/Canrisk1" target="_blank">
+                        <img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter logo">
+                        <span class="Twit-txt">Twitter</span>
+                    </a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-social">
-            <h2 class="Title_2">Canrisk social networks!</h2>
-            <ul class="Social">
-                <li><a href="https://www.instagram.com/canrisk/" target="_blank">
-                    <img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo">
-                    <span class="Inst-txt">Instagram</span>
-                </a></li>
-                <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank">
-                    <img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo">
-                    <span class="Face-txt">Facebook</span>
-                </a></li>
-                <li><a href="https://twitter.com/Canrisk1" target="_blank">
-                    <img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter">
-                    <span class="Twit-txt">Twitter</span>
-                </a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
  
     <script>
         const btn = document.getElementById('hamburgerBtn');

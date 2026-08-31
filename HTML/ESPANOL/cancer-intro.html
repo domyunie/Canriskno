@@ -7,7 +7,40 @@
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
     <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
     <style>
-        /*  TARJETA QUE ROTA (FLIP CARD)  */
+        /* ===== DISPOSICIÓN DE 2 FILAS POR 3 COLUMNAS ===== */
+        .info-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 20px !important;
+            width: 100% !important;
+            max-width: 1200px;
+            margin: 2rem auto !important;
+            padding: 0 1rem;
+            box-sizing: border-box !important;
+        }
+
+        .info-grid .info-card {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+        }
+
+        /* Ajuste responsivo para pantallas pequeñas */
+        @media (max-width: 900px) {
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* ===== TARJETA QUE ROTA (FLIP CARD) ===== */
         .flip-card {
             perspective: 1200px;
             width: 100%;
@@ -79,7 +112,7 @@
             opacity: 0.7;
         }
 
-        /*  BLOQUE DE DATOS RÁPIDOS */
+        /* ===== BLOQUE DE DATOS RÁPIDOS ===== */
         .quick-stats {
             display: flex;
             flex-wrap: wrap;
@@ -119,7 +152,7 @@
             color: #555;
         }
 
-        /*  ÍCONOS EN TÍTULOS Y LISTAS  */
+        /* ===== ÍCONOS EN TÍTULOS Y LISTAS ===== */
         .info-card h3 .card-icon {
             margin-right: 0.4rem;
         }
@@ -140,7 +173,7 @@
 </head>
 <body>
 
-    <!--  LOGO Y BOTÓN DEL MENÚ LATERAL -->
+    <!-- LOGO Y BOTÓN DEL MENÚ LATERAL -->
     <div class="navbar-brand">
         <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Abrir menú lateral">
             <span></span>
@@ -151,7 +184,7 @@
         <img src="../../MULTIMEDIA/Canrisk LOGO.svg" alt="Canrisk" class="C-L"> 
     </div>
 
-    <!--  MENÚ LATERAL (SIDEBAR)  -->
+    <!-- MENÚ LATERAL (SIDEBAR) -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
@@ -169,7 +202,7 @@
         </ul>
     </nav>
     
-    <!--  FONDO OSCURO AL ABRIR EL SIDEBAR  -->
+    <!-- FONDO OSCURO AL ABRIR EL SIDEBAR -->
     <div class="overlay-menu" id="menuOverlay"></div>
 
     <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
@@ -200,7 +233,7 @@
 
     </nav>
 
-    <!-- ENCABEZADO DE LA PÁGINA  -->
+    <!-- ENCABEZADO DE LA PÁGINA -->
     <div class="Titulos">
         <h1>Introducción al Cáncer</h1>
     </div> <br>
@@ -230,7 +263,7 @@
         </div>
     </div>
 
-    <!--  DATOS RÁPIDOS  -->
+    <!-- DATOS RÁPIDOS -->
     <div class="quick-stats">
         <div class="stat-box">
             <span class="stat-icon">🧬</span>
@@ -249,6 +282,7 @@
         </div>
     </div>
 
+    <!-- TARJETAS ORGANIZADAS EN 2 FILAS DE 3 COLUMNAS -->
     <div class="info-grid">
         <div class="info-card">
             <h3>¿Cómo se origina?</h3>
@@ -281,7 +315,7 @@
         </div>
     </div>
 
-    <!--  SEÑALES DE ALERTA -->
+    <!-- SEÑALES DE ALERTA -->
     <div class="Titulos">
         <h1>Señales de Alerta</h1>
     </div><br>
@@ -312,8 +346,8 @@
                         <p>Si alguna señal persiste por más de dos semanas, no esperes: agenda una cita con un profesional de la salud. Un diagnóstico a tiempo cambia por completo el pronóstico.</p>
                     </div>
                 </div>
+                <span class="flip-hint">Pasa el mouse sobre la imagen para ver un consejo</span>
             </div>
-            <span class="flip-hint">Pasa el mouse sobre la imagen para ver un consejo</span>
         </div>
     </div>
 
@@ -335,12 +369,12 @@
         </div>
     </div>
 
-    <!--  MITOS Y REALIDADES  -->
+    <!-- MITOS Y REALIDADES -->
     <div class="Titulos">
         <h1>Mitos y Realidades</h1>
     </div><br>
 
-    <div class="info-grid">
+    <div class="info-grid" style="grid-template-columns: repeat(2, 1fr) !important;">
         <div class="info-card">
             <h3>Mito: El cáncer siempre es hereditario</h3>
             <p>Realidad: Solo entre un 5% y un 10% de los casos se relacionan directamente con mutaciones genéticas heredadas; la mayoría se debe a factores ambientales y de estilo de vida.</p>
@@ -362,39 +396,39 @@
         </div>
     </div>
 
-<!--  PIE DE PÁGINA  -->
+    <!-- PIE DE PÁGINA -->
     <footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h2 class="Title">DERECHOS DE AUTOR</h2>
-                <ul class="Advice">
-                    <li>&copy; Canrisk 2026</li>
-                    <li>&copy; Todos los derechos reservados al equipo de Canrisk</li>
-                    <li>Agradecimientos especiales al equipo de Canrisk</li>
-                    <li>que han hecho esta pagina algo posible.</li>
-                </ul>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h2 class="Title">DERECHOS DE AUTOR</h2>
+                    <ul class="Advice">
+                        <li>&copy; Canrisk 2026</li>
+                        <li>&copy; Todos los derechos reservados al equipo de Canrisk</li>
+                        <li>Agradecimientos especiales al equipo de Canrisk</li>
+                        <li>que han hecho esta pagina algo posible.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2 class="Title_1">INFORMACIÓN IMPORTANTE</h2>
+                    <ul class="Advice_1">
+                        <li>Esta pagina NO reemplaza la ayuda de un profesional medico.</li>
+                        <li>En caso de tener algun tipo de emergencia o un sintoma puede</li>
+                        <li>apoyarse en los diferentes números de hospitales que nosotros</li>
+                        <li>proporcionamos, o llame directamente al 911.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h2 class="Title_1">INFORMACIÓN IMPORTANTE</h2>
-                <ul class="Advice_1">
-                    <li>Esta pagina NO reemplaza la ayuda de un profesional medico.</li>
-                    <li>En caso de tener algun tipo de emergencia o un sintoma puede</li>
-                    <li>apoyarse en los diferentes números de hospitales que nosotros</li>
-                    <li>proporcionamos, o llame directamente al 911.</li>
+            <div class="footer-social">
+                <h2 class="Title_2">Redes sociales de Canrisk!</h2>
+                <ul class="Social">
+                    <li><a href="https://www.instagram.com/canrisk/" target="_blank"><img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo"><p class="Inst-txt">Instagram</p></a></li>
+                    <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank"><img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo"><p class="Face-txt">Facebook</p></a></li>
+                    <li><a href="https://twitter.com/Canrisk1" target="_blank"><img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter"><p class="Twit-txt">Twitter</p></a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-social">
-            <h2 class="Title_2">Redes sociales de Canrisk!</h2>
-            <ul class="Social">
-                <li><a href="https://www.instagram.com/canrisk/" target="_blank"><img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo"><p class="Inst-txt">Instagram</p></a></li>
-                <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank"><img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo"><p class="Face-txt">Facebook</p></a></li>
-                <li><a href="https://twitter.com/Canrisk1" target="_blank"><img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter"><p class="Twit-txt">Twitter</p></a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
     
     <script>
         const btn = document.getElementById('hamburgerBtn');

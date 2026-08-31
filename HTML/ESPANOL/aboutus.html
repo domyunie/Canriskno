@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
     <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
     <style>
-        /* ===== TARJETA QUE ROTA (FLIP CARD) — faltaba esto ===== */
+        /* TARJETA QUE ROTA (FLIP CARD) — faltaba esto  */
         .IMG .flip-card {
             perspective: 1200px;
             width: 100%;
@@ -79,17 +79,19 @@
             opacity: 0.7;
         }
 
-
         .info-grid {
-            display: grid !important;
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 20px;
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            justify-content: center !important;
+            align-items: stretch !important;
+            gap: 20px !important;
+            width: 100% !important;
         }
 
-        .info-card {
-            width: 100%;
+        .info-grid .info-card {
+            flex: 0 1 auto !important; 
         }
-
     </style>
 </head>
 <body>
@@ -179,8 +181,6 @@
         </div>
 
             <div class="IMG">
-           <div class="IMG">
-
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
