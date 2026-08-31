@@ -6,6 +6,103 @@
     <title>Cuestionario - Canrisk</title>
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
     <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.png">
+    <style>
+        /* ===== COLOR ROSA DE LA PALETA PARA TEXTO EN NEGRITA ===== */
+        strong, b {
+            color: #a83862 !important;
+        }
+
+        /* ===== MANTENER LAS 4 TARJETAS AL LADO SIN SCROLL NI SALTO DE LÍNEA ===== */
+        .info-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            justify-content: space-between !important;
+            align-items: stretch !important;
+            gap: 15px !important;
+            width: 100% !important;
+            max-width: 1100px;
+            margin: 0 auto;
+            overflow-x: hidden !important;
+            padding: 10px 0;
+            box-sizing: border-box !important;
+        }
+
+        .info-grid .info-card {
+            flex: 1 1 0px !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+        }
+
+        /* ===== SECCIÓN EDUCATIVA ===== */
+        .awareness-banner {
+            max-width: 1100px;
+            margin: 3.5rem auto;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #fdf5f7 100%);
+            border: 1px solid #eed4dd;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .awareness-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .awareness-header h2 {
+            color: #a83862;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .awareness-header p {
+            color: #666;
+            font-size: 0.9rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .stat-box {
+            flex: 1 1 280px;
+            max-width: 330px;
+            background: #ffffff;
+            border-left: 4px solid #a83862;
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #a83862;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-box h4 {
+            font-size: 1rem;
+            color: #a83862 !important; /* Cambiado de negro a rosa */
+            margin-bottom: 0.4rem;
+        }
+
+        .stat-box p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.45;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -114,39 +211,67 @@
         </div>
     </div>
 
-<!-- ===== PIE DE PÁGINA ===== -->
+    <!-- ===== SECCIÓN DE DATOS DE CONCIENTIZACIÓN ===== -->
+    <section class="awareness-banner">
+        <div class="awareness-header">
+            <h2>¿Por qué es vital informarnos?</h2>
+            <p>La desinformación sigue siendo una de las principales barreras para una detección temprana y un acompañamiento efectivo.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">30% - 50%</div>
+                <h4>Casos Prevenibles</h4>
+                <p>Entre un tercio y la mitad de los casos de cáncer pueden prevenirse adoptando estilos de vida saludables y evitando factores de riesgo conocidos.</p>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">Detección Precoz</div>
+                <h4>Mayor Eficacia</h4>
+                <p>Identificar la enfermedad en sus etapas iniciales aumenta considerablemente las probabilidades de éxito en el tratamiento y la recuperación.</p>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">Red de Apoyo</div>
+                <h4>Impacto Emocional</h4>
+                <p>Contar con un entorno familiar y comunitario bien informado reduce significativamente el estrés y la ansiedad durante el proceso del paciente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
     <footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h2 class="Title">DERECHOS DE AUTOR</h2>
-                <ul class="Advice">
-                    <li>&copy; Canrisk 2026</li>
-                    <li>&copy; Todos los derechos reservados al equipo de Canrisk</li>
-                    <li>Agradecimientos especiales al equipo de Canrisk</li>
-                    <li>que han hecho esta pagina algo posible.</li>
-                </ul>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h2 class="Title">DERECHOS DE AUTOR</h2>
+                    <ul class="Advice">
+                        <li>&copy; Canrisk 2026</li>
+                        <li>&copy; Todos los derechos reservados al equipo de Canrisk</li>
+                        <li>Agradecimientos especiales al equipo de Canrisk</li>
+                        <li>que han hecho esta pagina algo posible.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h2 class="Title_1">INFORMACIÓN IMPORTANTE</h2>
+                    <ul class="Advice_1">
+                        <li>Esta pagina NO reemplaza la ayuda de un profesional medico.</li>
+                        <li>En caso de tener algun tipo de emergencia o un sintoma puede</li>
+                        <li>apoyarse en los diferentes números de hospitales que nosotros</li>
+                        <li>proporcionamos, o llame directamente al 911.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h2 class="Title_1">INFORMACIÓN IMPORTANTE</h2>
-                <ul class="Advice_1">
-                    <li>Esta pagina NO reemplaza la ayuda de un profesional medico.</li>
-                    <li>En caso de tener algun tipo de emergencia o un sintoma puede</li>
-                    <li>apoyarse en los diferentes números de hospitales que nosotros</li>
-                    <li>proporcionamos, o llame directamente al 911.</li>
+            <div class="footer-social">
+                <h2 class="Title_2">Redes sociales de Canrisk!</h2>
+                <ul class="Social">
+                    <li><a href="https://www.instagram.com/canrisk/" target="_blank"><img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo"><p class="Inst-txt">Instagram</p></a></li>
+                    <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank"><img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo"><p class="Face-txt">Facebook</p></a></li>
+                    <li><a href="https://twitter.com/Canrisk1" target="_blank"><img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter"><p class="Twit-txt">Twitter</p></a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-social">
-            <h2 class="Title_2">Redes sociales de Canrisk!</h2>
-            <ul class="Social">
-                <li><a href="https://www.instagram.com/canrisk/" target="_blank"><img src="../../MULTIMEDIA/instagram.png" class="Inst-IMG" alt="Instagram logo"><p class="Inst-txt">Instagram</p></a></li>
-                <li><a href="https://www.facebook.com/Canrisk-110882646091155" target="_blank"><img src="../../MULTIMEDIA/facebook.png" class="Face-IMG" alt="Facebook logo"><p class="Face-txt">Facebook</p></a></li>
-                <li><a href="https://twitter.com/Canrisk1" target="_blank"><img src="../../MULTIMEDIA/gorjeo.png" class="Twit-IMG" alt="Twitter"><p class="Twit-txt">Twitter</p></a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
     
     <script>
         const btn = document.getElementById('hamburgerBtn');

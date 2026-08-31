@@ -5,13 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Canrisk</title>
     <link rel="stylesheet" href="../../CSS/Style-Info.css">
-    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.png">
+    <link rel="icon" type="image/png" href="../../MULTIMEDIA/Canrisk LOGO.svg">
+    <style>
+        /* ===== TARJETA QUE ROTA (FLIP CARD) — faltaba esto ===== */
+        .IMG .flip-card {
+            perspective: 1200px;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner,
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(145deg, #a83862, #5e1c38);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1.8rem;
+            gap: 0.6rem;
+        }
+
+        .flip-card-back .flip-icon {
+            font-size: 2rem;
+        }
+
+        .flip-card-back p {
+            font-size: 0.92rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .flip-hint {
+            display: block;
+            margin-top: 0.6rem;
+            font-size: 0.8rem;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        .info-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 20px;
+        }
+
+        .info-card {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
  
-    <!-- ===== LOGO Y BOTÓN DEL MENÚ LATERAL ===== -->
+    <!--  LOGO Y BOTÓN DEL MENÚ LATERAL  -->
     <div class="navbar-brand">
- 
         <button class="hamburger-sidebar-btn" id="sidebarBtn" aria-label="Abrir menú lateral">
             <span></span>
             <span></span>
@@ -20,27 +102,29 @@
         <h1>Canrisk</h1>
         <img src="../../MULTIMEDIA/Canrisk LOGO.png" alt="Canrisk" class="C-L"> 
     </div>
- 
-    <!-- ===== MENÚ LATERAL (SIDEBAR) ===== -->
+    
+    <!--  MENÚ LATERAL (SIDEBAR)  -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <div class="sidebar-decoracion">
             <span></span>
             <span></span>
             <span></span>
         </div>
- 
+
         <ul class="sidebar-list">
             <li><a href="cancer-intro.html">Introducción al cáncer &rarr;</a></li>
+            <li><a href="cancer.html">Tipos de Cáncer &rarr;</a></li>
             <li><a href="psycho-help.html">Apoyo psicológico &rarr;</a></li>
             <li><a href="help.html">Centro de ayuda &rarr;</a></li>
             <li><a href="quizz.html">Cuestionario &rarr;</a></li>
+            <li><a href="faq.html">Preguntas frecuentes &rarr;</a></li>
         </ul>
     </nav>
- 
-    <!-- ===== FONDO OSCURO AL ABRIR EL SIDEBAR ===== -->
+
+    <!--  FONDO OSCURO AL ABRIR EL SIDEBAR  -->
     <div class="overlay-menu" id="menuOverlay"></div>
  
-    <!-- ===== BARRA DE NAVEGACIÓN SUPERIOR ===== -->
+    <!--  BARRA DE NAVEGACIÓN SUPERIOR  -->
     <nav class="navbar" id="mainNav">
  
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
@@ -50,15 +134,15 @@
         </button>
  
         <ul class="Info-nav">
-            <li><h4><a href="../ESPANOL/Principal.html">Inicio</a></h4></li>
-            <li><h4><a href="../ESPANOL/aboutus.html">Sobre nosotros</a></h4></li>
-            <li><h4><a href="../ESPANOL/Contacto.html">Contáctanos</a></h4></li>
+            <li class="box-II"><h4><a href="../ESPANOL/Principal.html">Inicio</a></h4></li>
+            <li class="box-II"><a href="../ESPANOL/aboutus.html"><h4>Sobre nosotros</h4></a></li>
+            <li class="box-II"><a href="../ESPANOL/Contacto.html"><h4>Contáctanos</h4></a></li>
         </ul>
  
         <div class="right-group">
             <ul class="Index">
-                <li class="box-I"><a href="../ESPANOL/login.html"><h4>Iniciar Sesión</h4></a></li>
-                <li class="box-I"><a href="../ESPANOL/register.html"><h4>Registrarse</h4></a></li>
+                <li class="box-I"><a href="../../HTML/ESPANOL/login.html"><h4>Iniciar Sesión</h4></a></li>
+                <li class="box-I"><a href="../../HTML/ESPANOL/register.html"><h4>Registrarse</h4></a></li>
             </ul>
             <a id="langSwitch" class="lang-switch" href="#" aria-label="Cambiar idioma / Switch language">ES</a>
             <div class="Photo">
@@ -68,7 +152,7 @@
  
     </nav>
  
-    <!-- ===== ENCABEZADO DE LA PÁGINA ===== -->
+    <!--  ENCABEZADO DE LA PÁGINA  -->
     <header class="hero-section">
         <div class="hero-container">
             <h1 class="hero-title">Sobre nosotros</h1>
@@ -91,17 +175,21 @@
                 fusión para darle a la página un enfoque cercano y fácil de recordar.</p>
             </div>
         </div>
-        <div class="flip-card" onclick="this.classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="../../MULTIMEDIA/cancer imagen.jpg" alt="Equipo de Canrisk">
+
+            <div class="IMG">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../../MULTIMEDIA/cancer imagen.jpg" alt="Equipo de Canrisk" class="IMG-TXT">
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Este proyecto fue creado por un equipo de
+                        estudiantes comprometidos con acercar información médica confiable a quienes más la
+                        necesitan.</p>
+                    </div>
+                </div>
+                <span class="flip-hint">Pasa el mouse sobre la imagen para ver un dato rápido</span>
             </div>
-            <div class="flip-card-back">
-              <p>Toca la tarjeta para volver a verla. Este proyecto fue creado por un equipo de
-              estudiantes comprometidos con acercar información médica confiable a quienes más la
-              necesitan.</p>
-            </div>
-          </div>
         </div>
     </div>
 
@@ -126,7 +214,7 @@
         </div>
     </section>
  
-<!-- ===== PIE DE PÁGINA ===== -->
+<!--  PIE DE PÁGINA -->
     <footer>
     <div class="footer-container">
         <div class="footer-content">
